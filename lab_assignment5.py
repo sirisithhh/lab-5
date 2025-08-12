@@ -103,7 +103,6 @@ if __name__ == "__main__":
     # A7: Elbow method for optimal k (k values capped to avoid > n_samples)
     k_elbow = range(2, len(data_cluster) + 1)  # max clusters = number of samples
     distortions = elbow_method(data_cluster, k_elbow)
-
     plt.figure()
     plt.plot(k_elbow, distortions, marker='o')
     plt.xlabel('Number of Clusters (k)')
@@ -111,4 +110,3 @@ if __name__ == "__main__":
     plt.title('A7 - Elbow Method Plot')
     plt.grid(True)
     plt.show()
-
